@@ -86,7 +86,11 @@
                   </thead>
                   <tbody>
                   <tr>
-                    <td><input type="text" class="form-control" th:field="${coffee.name}" /></td>
+                    <td>
+                      <input type="text" class="form-control" th:field="${coffee.name}"/>
+                      <span th:errors="${coffee.name}"> </span>
+                    </td>
+
                     <td>
                       <select class="form-control" th:field="${coffee.faculty}" value="Faculty">
                         <option value="WNOZ">WNOZ</option>
@@ -99,6 +103,7 @@
                         <option value="WNZ">WNZ</option>
                         <option value="WMS">WMW</option>
                       </select>
+                      <span th:errors="${coffee.faculty}"> </span>
                     </td>
                     <td>
                       <select class="form-control" th:field="${coffee.type}" value="type">
@@ -115,10 +120,8 @@
                         <option value="Espressino">Espressino</option>
                         <option value="Black tie">Black tie</option>
                         <option value="Moka">Moka</option>
-                        <!--<option>Mocha</option>-->
-                        <!--<option>Eiskaffee</option>-->
-                        <!--<option>Liqueur Coffee</option>-->
                       </select>
+                      <span th:errors="${coffee.type}"> </span>
                     </td>
                     <td width="120">
                       <select class="form-control" th:field="${coffee.howMuch}" value="howMuch">
@@ -130,7 +133,9 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                         </optgroup></select>
+                      <span th:errors="${coffee.howMuch}"> </span>
                     </td>
+
                   </tr>
                   </tbody>
                 </table>

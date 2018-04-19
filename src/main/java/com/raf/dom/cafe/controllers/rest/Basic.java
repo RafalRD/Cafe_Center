@@ -1,4 +1,4 @@
-package com.raf.dom.cafe.controller.rest;
+package com.raf.dom.cafe.controllers.rest;
 
 import com.raf.dom.cafe.model.Coffee;
 import com.raf.dom.cafe.services.CoffeeRepo;

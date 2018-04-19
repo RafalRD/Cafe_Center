@@ -1,4 +1,4 @@
-package com.raf.dom.cafe.controller;
+package com.raf.dom.cafe.controllers.htmlPages;
 
 
 import com.raf.dom.cafe.model.Coffee;
@@ -6,10 +6,12 @@ import com.raf.dom.cafe.services.CoffeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.validation.Valid;
 
 @Controller
 public class HtmlPages {
@@ -39,11 +41,5 @@ public class HtmlPages {
         return "store";
     }
 
-    @PostMapping("/save")
-    public String save(@ModelAttribute Coffee coffee, Model model){
-        coffeeRepo.save(coffee);
-        model.addAttribute("coffee",coffee);
-        return "redirect:about";
-    }
 
 }
