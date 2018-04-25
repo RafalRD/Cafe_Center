@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface CoffeeRepo extends JpaRepository<Coffee,Long> {
 
     Coffee findByName(String name);
+    void deleteById(Long id);
 }

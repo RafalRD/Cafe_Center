@@ -11,3 +11,7 @@ v0.1)
 v0.2)
 + coffee model validation
 + send validation errors to html("about") file to see what user doing wrong
+
+v0.3)
++ spring security
++ secured from delete orders

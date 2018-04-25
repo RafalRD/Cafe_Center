@@ -4,6 +4,7 @@ import com.raf.dom.cafe.model.Coffee;
 import com.raf.dom.cafe.services.CoffeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -28,6 +29,11 @@ public class Basic {
         coffeeRepo.save(coffee);
     }
 
+    @GetMapping("/delete/{id}")
+    public ModelAndView deleteById(@PathVariable Long id){
+        coffeeRepo.deleteById(id);
+        return new ModelAndView("redirect:/about");
+    }
 
 
 }

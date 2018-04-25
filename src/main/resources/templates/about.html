@@ -154,6 +154,7 @@
                               <th>Faculty</th>
                               <th>Type</th>
                               <th>Cups</th>
+                              <th>-_-</th>
                           </tr>
                           </thead>
                           <tbody>
@@ -163,6 +164,12 @@
                                   <td th:text="${cafe1.faculty}">Faculty</td>
                                   <td th:text="${cafe1.type}">Type</td>
                                   <td th:text="${cafe1.howMuch}">Cups</td>
+                                  <td> <a th:href="@{'delete/{id}'(id=${cafe1.id})}" class="delete" >
+                                      <button type="button" class="btn btn-default btn-sm">
+                                          Delete
+                                      </button>
+                                      </a>
+                                  </td>
                               </tr>
 
                           <!--</th:block>-->
