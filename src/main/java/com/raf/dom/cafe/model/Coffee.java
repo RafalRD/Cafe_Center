@@ -1,7 +1,6 @@
 package com.raf.dom.cafe.model;
 
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

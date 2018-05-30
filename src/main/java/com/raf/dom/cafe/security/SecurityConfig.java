@@ -33,11 +33,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 //    block -> unblock
-//    @Override
-//    public void configure(WebSecurity web) throws Exception {
-//        web
-//            .ignoring()
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web
+            .ignoring()
 //            .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/img/**","/vendor/**","/scss/**");
-//    }
+            .antMatchers("/add");
+    }
 
 }
